@@ -16,7 +16,7 @@
 			<ul class="playlist">
 				<li class="track" ng-repeat="track in tracks">
 					<a href="{{track.url}}" target="_blank">
-						<img src="{{track.image['3']['#text']}}" class="js-track-img">
+						<img class="js-track-img" src="{{track.image['3']['#text']}}" >
 						<div class="info">
 							<span class="artist"><strong>{{track.artist['#text']}}</strong></span><br />
 							<span class="name">{{track.name}}</span><br />
@@ -32,7 +32,7 @@
 <script src="js/geometryangle.min.js"></script>
 <script>
 	/* Background */
-	// $('.geometryangle').Geometryangle();
+	$('.geometryangle').Geometryangle();
 </script>
 </body>
 </html>
