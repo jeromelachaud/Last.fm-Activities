@@ -9,10 +9,8 @@ See a live example: http://lastfm.jeromelachaud.net/
 Tools
 -----------
 * [Last.fm] - Last.fm API
-* [Grafikart] - Grafikart script
-* [Trianglify] - poly style background generator
+* [Geometryangle] - Flat surface shader
 
 [Last.fm]:http://www.lastfm.fr/api
-[Grafikart]:http://www.grafikart.fr/tutoriels/php/lastfm-api-267
-[Trianglify]:https://github.com/qrohlf/trianglify
-	
+[Geometryangle]:https://github.com/TritonCode/Geometryangle
+
