@@ -1,9 +1,9 @@
 Last.fm - Latest Scrobbled Tracks
 ====================
 
-Small app that displays your latest scrobbled tracks.
+Small app build with AngularJS that displays your latest scrobbled tracks.
 
-See a live example: http://lastfm.jeromelachaud.net/
+See a live example: http://lastfm.jeromelachaud.com/
 
 
 Tools
