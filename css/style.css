@@ -43,11 +43,6 @@ ul {
   list-style-type: none; 
 }
 
-li {
-  float: left;
-  margin-bottom: 5rem;
-}
-
 /*------------------------------------*\
     STRUCTURE
 \*------------------------------------*/
@@ -67,14 +62,14 @@ li {
 /*------------------------------------*\
  	ELEMENTS
 \*------------------------------------*/
-.logo {
+.menu {
   width: 100%;
   text-align: center;
   position: relative;
 }
 
 @media screen and (min-width: 740px) {
-  .logo {
+  .menu {
     text-align: right;
     position: fixed;
     width: 95%;
@@ -82,21 +77,40 @@ li {
   }
 }
 
-.logo img {
+.menu__logo img {
   width: 150px;
   height: 45px;
-  opacity: 0.3; 
+  opacity: 0.4; 
 }
 
-.logo a {
+.menu__logo a {
   display: inline-block;
 }
 
-.logo a img:hover{
-  opacity: 0.8;
+.menu__logo a img:hover{
+  opacity: 0.7;
   -webkit-transition: opacity .4s ease-in-out;
   transition: opacity .4s ease-in-out;
+}
 
+.menu__list {
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+@media screen and (min-width: 740px) {
+  .menu__list{
+    text-align:right;
+  }
+}
+
+.menu__item a{
+    color: rgba(255,255,255,0.6);
+}
+
+.menu__item a:hover{
+    background-color: rgba(255,255,255,0.4);
 }
 
 .loading {
@@ -105,19 +119,23 @@ li {
   padding-top: 25vh;
 }
 
-.track a:link, 
-.track a:visited {
+li.item {
+  margin-bottom: 5rem;
+}
+
+.item a:link, 
+.item a:visited {
   color: #111111;
   display: block;
   background-color: rgba(255, 255, 255, 0.8);
 }
 
-.track a:active {
+.item a:active {
   color: lime;
   text-decoration: none; 
 }
 
-.track a:hover {
+.item a:hover {
   background-color: rgba(255, 255, 255, 1);
   -webkit-transition: background-color .3s ease-in-out;
   transition: background-color .3s ease-in-out;

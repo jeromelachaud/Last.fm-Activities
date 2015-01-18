@@ -1,7 +1,7 @@
-Last.fm - Latest Scrobbled Tracks
+Last.fm Activity
 ====================
 
-Small app build with AngularJS that displays your latest scrobbled tracks.
+Small app build with AngularJS that displays your latest activities on Last.fm.
 
 See a live example: http://lastfm.jeromelachaud.com/
 

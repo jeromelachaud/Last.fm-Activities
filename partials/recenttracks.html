@@ -1,0 +1,16 @@
+<div ng-show="loading" class="loading"><span class="loader loader-bars"><span></span></span>Loading</div>
+	<div class="grid">
+		<ul class="list">
+			<li class="item" ng-repeat="track in tracks">
+				<a href="{{track.url}}" target="_blank">
+					<img class="js-track-img" src="{{track.image['3']['#text']}}" >
+					<div class="info">
+						<span class="artist"><strong>{{track.artist['#text']}}</strong></span><br />
+						<span class="name">{{track.name}}</span><br />
+						<span class="album"><em>{{track.album['#text']}}</em></span><br />
+						<span class="date">{{track.date['#text']}}</span>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
