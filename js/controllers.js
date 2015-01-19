@@ -11,7 +11,7 @@ scrobbledTracks.controller('scrobbledCtrl', ['settings', '$scope', '$http',
 		$scope.loading = true;
 		$http.get('http://ws.audioscrobbler.com/2.0/?format=json&method=user.getrecenttracks&user='+settings.User+'&api_key='+settings.apiKey+'').success(function(data) {
 				$scope.loading = false;
-		    	$scope.tracks = data['recenttracks']['track'];
+				$scope.tracks = data['recenttracks']['track'];
 	    		$scope.images = data['recenttracks']['track']['images'];
 	    		if (!($scope.images)) $('.js-track-img').remove();
     		});

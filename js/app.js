@@ -2,19 +2,31 @@
 
 /* App */
 var app = angular.module('lastFmApp', [
-	'ngRoute',
+	'ui.router',
 	'Menu',
 	'scrobbledTracks',
 	'topArtists'
 	]);
 
 /* Routes */
-app.config(function($routeProvider) {
-	$routeProvider
-		.when('/', {templateUrl: 'templates/recenttracks.html', controller:'scrobbledCtrl'})
-		.when('/recenttracks', {templateUrl: 'templates/recenttracks.html', controller:'scrobbledCtrl'})
-		.when('/topartists', {templateUrl: 'templates/topartists.html', controller:'topArtistsCtrl'})
-		.otherwise({redirectTo: '/'})
+app.config(function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise("/recenttracks");
+  	$stateProvider
+    	.state('home', {
+	     	url: "/",
+	      	templateUrl: "templates/recenttracks.html",
+	      	controller:'scrobbledCtrl'
+    	})
+    	.state('recenttracks', {
+	      	url: "/recenttracks",
+	      	templateUrl: "templates/recenttracks.html",
+      		controller:'scrobbledCtrl'
+    	})
+	    .state('topartists', {
+		    url: "/topartists",
+		    templateUrl: "templates/topartists.html",
+		    controller:'topArtistsCtrl'
+	    })
 });
 
 /* Constants*/
