@@ -29,12 +29,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
 	    })
 });
 
-/* Constants*/
-app.constant('settings', {
-    User: 'PatBateman75',
-    apiKey: '5fac3e93c05bc557b45e4ab4843b7882'
-});
-
 /* Modules */
 var Menu = angular.module('Menu', []);
 var scrobbledTracks = angular.module('scrobbledTracks', []);
