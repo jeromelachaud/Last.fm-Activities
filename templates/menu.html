@@ -3,5 +3,7 @@
 	<ul class="menu__list">
 		<li ui-sref-active="active" class="menu__item"><a ui-sref="recenttracks">Latest tracks</a></li>
 		<li ui-sref-active="active" class="menu__item"><a ui-sref="topartists">Top artists</a></li>
+		<li class="menu__item"><a href="" ng-click="toggle()">User infos</li>
 	</ul>
+	<div ng-include src="'templates/usercard.html'"></div>
 </div>

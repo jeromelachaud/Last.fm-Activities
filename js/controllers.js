@@ -2,6 +2,21 @@
 Menu.controller('MenuCtrl', ['settings', '$scope',
 	function (settings, $scope) {
 		$scope.user = settings.User;
+	 	$scope.visible = true;
+	 	$scope.toggle = function() {
+			$scope.visible = !$scope.visible;
+		};
+
+	}
+]);
+
+/* Controleur du module 'userInfos' */
+userCard.controller('usercardCtrl', ['settings', '$scope', '$http',
+	function (settings, $scope, $http) {
+		$http.get('http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user='+settings.User+'&api_key='+settings.apiKey+'&format=json').success(function(data) {
+				$scope.user = data['user'];
+				$scope.image = data['image'];
+    		});
 	}
 ]);
 

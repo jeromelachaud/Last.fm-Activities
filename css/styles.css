@@ -22,7 +22,6 @@ html {
 body {
   font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: white;
-  background-color: whitesmoke; 
 }
 
 img {
@@ -70,11 +69,11 @@ ul {
   padding-bottom: 3rem;
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 860px) {
   .menu {
     position: fixed;
     right: 20px;
-    width: 25%;
+    width: auto;
     text-align: right;
   }
 }
@@ -95,13 +94,13 @@ ul {
   transition: opacity .4s ease-in-out;
 }
 
-.menu__list {
+.menu__list{
   text-align: center;
   margin: 0 auto;
 
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 860px) {
   .menu__list{
     text-align:right;
   }
@@ -116,6 +115,29 @@ ul {
     background-color: rgba(255,255,255,0.4);
 }
 
+/* Usercard */
+.usercard {
+  width: 25rem;
+  margin: 5px auto;
+  background-color: rgba(255,255,255,0.3);
+}
+
+@media screen and (min-width: 860px) {
+  .usercard {
+    width: auto;
+    border: 0;
+  }
+}
+
+.usercard__info {
+  margin: 0 auto;
+  padding: 1rem 0.7rem 0.7rem 0;
+}
+
+.usercard__info li {
+  color:#fff; 
+  text-align: right;
+}
 
 /* List */
 li.item {
@@ -140,7 +162,7 @@ li.item {
   transition: background-color .3s ease-in-out;
 }
 
-.info {
+.item__info {
   padding: 1rem 0 0.7rem 0.7rem;
   width: 300px;
 }

@@ -4,6 +4,7 @@
 var app = angular.module('lastFmApp', [
 	'ui.router',
 	'Menu',
+	"userCard",
 	'scrobbledTracks',
 	'topArtists'
 	]);
@@ -26,14 +27,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		    url: "/topartists",
 		    templateUrl: "templates/topartists.html",
 		    controller:'topArtistsCtrl'
-	    })
+    	})
 });
 
 /* Modules */
 var Menu = angular.module('Menu', []);
+var userCard = angular.module('userCard', []);
 var scrobbledTracks = angular.module('scrobbledTracks', []);
 var topArtists = angular.module('topArtists', []);
-
 
 
 
