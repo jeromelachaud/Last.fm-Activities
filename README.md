@@ -5,6 +5,9 @@ Small app build with AngularJS that displays your latest activities on Last.fm.
 
 See a live example: http://lastfm.jeromelachaud.com/
 
+How-to
+-----------
+Edit 'settings-sample.js' file with your LastFM username and API key
 
 Tools
 -----------
