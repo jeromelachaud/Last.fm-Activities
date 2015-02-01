@@ -7,7 +7,7 @@ See a live example: http://lastfm.jeromelachaud.com/
 
 How-to
 -----------
-Edit 'settings-sample.js' file with your LastFM username and API key
+Amend the '/js/settings.js' file with your Last.fm username and API key
 
 Tools
 -----------
