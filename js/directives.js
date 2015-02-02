@@ -4,3 +4,10 @@ app.directive('menu', function(){
 		templateUrl:"/templates/menu.html"
 	};
 });
+
+app.directive('loading', function(){
+	return {
+		restrict: 'E',
+		templateUrl:"/templates/loading.html"
+	};
+});
