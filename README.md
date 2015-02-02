@@ -1,4 +1,4 @@
-Last.fm Activity
+Last.fm Activities
 ====================
 
 Small app built with AngularJS that displays your latest activities on Last.fm.
