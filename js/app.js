@@ -1,13 +1,7 @@
 'use strict';
 
 /* App */
-var app = angular.module('lastFmApp', [
-	'ui.router',
-	'Menu',
-	"userCard",
-	'scrobbledTracks',
-	'topArtists'
-	]);
+var app = angular.module('lastFmApp', ['ui.router']);
 
 /* Routes */
 app.config(function($stateProvider, $urlRouterProvider) {
@@ -29,13 +23,3 @@ app.config(function($stateProvider, $urlRouterProvider) {
 		    controller:'topArtistsCtrl'
     	})
 });
-
-/* Modules */
-var Menu = angular.module('Menu', []);
-var userCard = angular.module('userCard', []);
-var scrobbledTracks = angular.module('scrobbledTracks', []);
-var topArtists = angular.module('topArtists', []);
-
-
-
-

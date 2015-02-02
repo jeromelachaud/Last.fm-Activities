@@ -1,5 +1,5 @@
 /* Controleur du module 'Menu' */
-Menu.controller('MenuCtrl', ['settings', '$scope',
+app.controller('MenuCtrl', ['settings', '$scope',
 	function (settings, $scope) {
 		$scope.user = settings.User;
 	 	$scope.visible = true;
@@ -11,7 +11,7 @@ Menu.controller('MenuCtrl', ['settings', '$scope',
 ]);
 
 /* Controleur du module 'userInfos' */
-userCard.controller('usercardCtrl', ['settings', '$scope', '$http',
+app.controller('usercardCtrl', ['settings', '$scope', '$http',
 	function (settings, $scope, $http) {
 		$http.get('http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user='+settings.User+'&api_key='+settings.apiKey+'&format=json').success(function(data) {
 				$scope.user = data['user'];
@@ -21,7 +21,7 @@ userCard.controller('usercardCtrl', ['settings', '$scope', '$http',
 ]);
 
 /* Controleur du module 'scrobbledTracks' */
-scrobbledTracks.controller('scrobbledCtrl', ['settings', '$scope', '$http',
+app.controller('scrobbledCtrl', ['settings', '$scope', '$http',
 	function (settings, $scope, $http) {
 		$scope.loading = true;
 		$http.get('http://ws.audioscrobbler.com/2.0/?format=json&method=user.getrecenttracks&user='+settings.User+'&api_key='+settings.apiKey+'').success(function(data) {
@@ -34,7 +34,7 @@ scrobbledTracks.controller('scrobbledCtrl', ['settings', '$scope', '$http',
 ]);
 
 /* Controleur du module 'topArtists' */
-topArtists.controller('topArtistsCtrl', ['settings', '$scope', '$http',
+app.controller('topArtistsCtrl', ['settings', '$scope', '$http',
 	function (settings, $scope, $http) {
 		$scope.loading = true;
 		$http.get('http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user='+settings.User+'&api_key='+settings.apiKey+'&format=json').success(function(data) {
