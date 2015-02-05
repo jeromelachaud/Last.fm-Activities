@@ -26,20 +26,20 @@ body {
 
 img {
   max-width: 100%;
-  vertical-align: bottom; 
+  vertical-align: bottom;
 }
 
-a {text-decoration: none;} 
+a {text-decoration: none;}
 
 a:focus,
 a:hover,
 a:active {
-  outline: 0; 
+  outline: 0;
 }
 
 ul {
   padding: 0;
-  list-style-type: none; 
+  list-style-type: none;
 }
 
 /*------------------------------------*\
@@ -81,7 +81,7 @@ ul {
 .menu__logo img {
   width: 150px;
   height: 45px;
-  opacity: 0.4; 
+  opacity: 0.4;
 }
 
 .menu__logo a {
@@ -135,8 +135,14 @@ ul {
 }
 
 .usercard__info li {
-  color:#fff; 
+  color:#fff;
   text-align: right;
+}
+
+.usercard__info li span{
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-right: 5px;
 }
 
 /* List */
@@ -144,7 +150,7 @@ li.item {
   margin-bottom: 5rem;
 }
 
-.item a:link, 
+.item a:link,
 .item a:visited {
   color: #111111;
   display: block;
@@ -153,7 +159,7 @@ li.item {
 
 .item a:active {
   color: lime;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .item a:hover {
