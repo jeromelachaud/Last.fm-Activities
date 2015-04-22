@@ -3,8 +3,6 @@ Last.fm Activities
 
 Small app built with AngularJS that displays your latest activities on Last.fm.
 
-See a live example: http://lastfm.jeromelachaud.com/
-
 How-to
 -----------
 Amend the '/js/settings.js' file with your Last.fm username and API key
