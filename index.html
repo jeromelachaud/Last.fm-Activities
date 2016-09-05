@@ -25,7 +25,12 @@
 		/* Background */
 		$(document).ready(function(){
 
-			$('.geometryangle').Geometryangle({mesh:{}, lights: [{}], line: {}, vertex: {}});
+			$('.geometryangle').Geometryangle({
+        mesh: {
+          'background': 'red'
+        },
+        lights: [{}], line: {}, vertex: {}
+      });
 		});
 	</script>
 </body>
