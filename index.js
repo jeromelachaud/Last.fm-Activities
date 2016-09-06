@@ -5,12 +5,16 @@ import ngAnimate from 'angular-animate';
 import { lastfmApiFactory } from './js/lastfmApiFactory';
 import { scrobbledCtrl } from './js/scrobbledCtrl';
 import { topArtistsCtrl } from './js/topArtistsCtrl';
+import { usercardCtrl } from './js/usercardCtrl';
+import { MenuCtrl } from './js/MenuCtrl';
 
 const app = angular.module('lastFmApp', [angularRouter]);
 
 app.factory('lastfmApiFactory', [lastfmApiFactory]);
 app.controller('scrobbledCtrl', ['$scope', '$http', 'lastfmApiFactory', scrobbledCtrl]);
 app.controller('topArtistsCtrl', ['$scope', '$http', 'lastfmApiFactory', topArtistsCtrl]);
+app.controller('usercardCtrl', ['$scope', '$http', 'lastfmApiFactory', usercardCtrl]);
+app.controller('MenuCtrl', ['$scope', 'lastfmApiFactory', MenuCtrl]);
 
 
 /* Routes */
