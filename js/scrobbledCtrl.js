@@ -14,9 +14,6 @@ function scrobbledCtrl($scope, $http, lastfmApiFactory) {
     $scope.loading = false;
     $scope.tracks = data['recenttracks']['track'];
     $scope.images = data['recenttracks']['track']['images'];
-    if (!($scope.images)) {
-      document.getElementById('js-track-img').remove();
-    }
   });
 }
 

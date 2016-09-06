@@ -14,9 +14,6 @@ function topArtistsCtrl($scope, $http, lastfmApiFactory) {
     $scope.loading = false;
     $scope.artists = data['topartists']['artist'];
     $scope.images = data['topartists']['artist']['images'];
-    if (!($scope.images)) {
-      document.getElementById('js-track-img').remove();
-    }
   });
 }
 
