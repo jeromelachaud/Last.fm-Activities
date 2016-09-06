@@ -5,7 +5,7 @@
   "scripts": {
     "javascript": "watchify index.js -o app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
     "server": "live-server --host=localhost",
-    "start": "npm run javascript && npm run server",
+    "start": "npm run javascript & npm run server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
