@@ -6,7 +6,7 @@ function scrobbledCtrl($scope, $http, lastfmApiFactory) {
     apiKey
   } = lastfmApiFactory;
 
-  let lastfmApiUrl = `${baseUrl}&method=user.getrecenttracks&user=${user}&api_key${apiKey}`;
+  let lastfmApiUrl = `${baseUrl}&method=user.getrecenttracks&user=${user}&api_key=${apiKey}`;
 
   $scope.loading = true;
   $http.get(lastfmApiUrl)
