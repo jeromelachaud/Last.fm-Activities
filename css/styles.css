@@ -62,6 +62,7 @@ ul {
  	ELEMENTS
 \*------------------------------------*/
 /* Menu */
+menu { padding: 0;}
 .menu {
   width: 100%;
   text-align: center;
