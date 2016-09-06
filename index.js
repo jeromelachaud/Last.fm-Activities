@@ -1,6 +1,5 @@
 import angular from 'angular';
 import angularRouter from 'angular-ui-router';
-import ngAnimate from 'angular-animate';
 import Trianglify from 'Trianglify';
 
 import { lastfmApiFactory } from './js/lastfmApiFactory';
