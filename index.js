@@ -1,12 +1,23 @@
 import angular from 'angular';
 import angularRouter from 'angular-ui-router';
 import ngAnimate from 'angular-animate';
+import Trianglify from 'Trianglify';
 
 import { lastfmApiFactory } from './js/lastfmApiFactory';
 import { scrobbledCtrl } from './js/scrobbledCtrl';
 import { topArtistsCtrl } from './js/topArtistsCtrl';
 import { usercardCtrl } from './js/usercardCtrl';
 import { MenuCtrl } from './js/MenuCtrl';
+
+const pattern = Trianglify({
+  width: window.innerWidth,
+  height: 25000,
+  cell_size: 75,
+  x_colors: 'YlOrRd'
+});
+
+let backgroundImg = pattern.png();
+document.body.style.backgroundImage = 'url("'+backgroundImg+'")';
 
 const app = angular.module('lastFmApp', [angularRouter]);
 
