@@ -3,10 +3,20 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "javascript": "watchify index.js -o app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
-    "server": "live-server --host=localhost",
-    "start": "npm run javascript & npm run server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:js": "watchify src/js/index.js -o dist/app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
+    "build:js": "browserify src/js/index.js -o dist/app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
+    "watch:scss": "nodemon -e scss -x \"npm run dev:css\"",
+    "dev:css": "node-sass src/scss/main.scss dist/app.css --source-map=true",
+    "build:css": "node-sass src/scss/main.scss dist/app.css --output-style=compressed",
+    "build:img": "imagemin src/img/* --out-dir=dist/img",
+    "dev:templates": "cpx \"src/templates/*.html\" dist/templates -w -v",
+    "build:templates": "cpx \"src/templates/*.html\" dist/templates -v",
+    "dev:index": "cpx \"src/index*.html\" dist -w -v",
+    "build:index": "cpx \"src/index*.html\" dist -v",
+    "start": "live-server --host=localhost --open=dist",
+    "clean": "rm -rf dist & mkdirp 'dist'",
+    "dev": "npm run clean & npm run dev:index & npm run dev:templates & npm run build:img & npm run watch:scss & npm run dev:js & npm run start",
+    "build": "npm run clean & npm run build:index & npm run build:templates & npm run build:img & npm run build:css & npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -26,9 +36,15 @@
     "babel-core": "^6.14.0",
     "babel-preset-es2015": "^6.14.0",
     "babelify": "^7.3.0",
+    "cpx": "^1.5.0",
     "geopattern": "^1.2.3",
+    "imagemin-cli": "^3.0.0",
     "live-server": "^1.1.0",
     "moment": "^2.14.1",
+    "node-sass": "^3.9.3",
+    "nodemon": "^1.10.2",
+    "normalize": "^0.3.1",
+    "uglify": "^0.1.5",
     "ui-router": "^1.0.0-alpha.3",
     "watchify": "^3.7.0"
   }
