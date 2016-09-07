@@ -11,7 +11,7 @@ import { MenuCtrl } from './js/MenuCtrl';
 //Background generation
 const pattern = GeoPattern.generate('lastFmActivities', {
   color: '#B90000',
-  generator: 'sineWaves'
+  generator: 'plusSigns'
 });
 let backgroundImg = pattern.toDataUrl();
 document.body.style.backgroundImage = backgroundImg;
