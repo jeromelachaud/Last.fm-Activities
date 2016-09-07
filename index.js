@@ -1,6 +1,6 @@
 import angular from 'angular';
 import angularRouter from 'angular-ui-router';
-import Trianglify from 'Trianglify';
+import GeoPattern from 'GeoPattern';
 
 import { lastfmApiFactory } from './js/lastfmApiFactory';
 import { scrobbledCtrl } from './js/scrobbledCtrl';
@@ -8,15 +8,13 @@ import { topArtistsCtrl } from './js/topArtistsCtrl';
 import { usercardCtrl } from './js/usercardCtrl';
 import { MenuCtrl } from './js/MenuCtrl';
 
-const pattern = Trianglify({
-  width: window.innerWidth,
-  height: 25000,
-  cell_size: 75,
-  x_colors: 'YlOrRd'
+//Background generation
+const pattern = GeoPattern.generate('lastFmActivities', {
+  color: '#B90000',
+  generator: 'sineWaves'
 });
-
-let backgroundImg = pattern.png();
-document.body.style.backgroundImage = 'url("'+backgroundImg+'")';
+let backgroundImg = pattern.toDataUrl();
+document.body.style.backgroundImage = backgroundImg;
 
 const app = angular.module('lastFmApp', [angularRouter]);
 
