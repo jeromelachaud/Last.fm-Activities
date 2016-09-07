@@ -2,7 +2,6 @@
   "parserOptions": {
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
       "experimentalObjectRestSpread": true
     }
   },
@@ -16,12 +15,14 @@
   },
 
   "rules": {
+    "space-infix-ops": 2,
     "semi": [2, "always"],
     "no-unused-vars": 2,
+    "react/jsx-uses-vars": 2,
     "quotes": [1, "single"],
     "guard-for-in": 1,
-    "indent": [1, 2],
-    "brace-style": [2, "1tbs", {"allowSingleLine": true}],
+    "indent": [1, 2, { "SwitchCase": 1 }],
+    "brace-style": 1,
     "no-underscore-dangle": 0,
     "no-undef": 2,
     "keyword-spacing": [2, {before: true, after: true}],
@@ -29,7 +30,7 @@
     "new-cap": 0,
     "comma-dangle": 2,
     "constructor-super": 2,
-    "no-console": 1,
+    "no-console": 2,
     "no-constant-condition": 2,
     "no-const-assign": 2,
     "no-debugger": 2,
@@ -56,5 +57,5 @@
     "by": false,
     "angular": false,
     "sinon": false
-  }
+  },
 }
