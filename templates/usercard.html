@@ -1,6 +1,6 @@
 <div ng-controller="usercardCtrl" class="usercard">
 	<div ng-hide="visible">
-		<img src="{{user.image['3']['#text']}}" alt="{{user.name}}" />
+		<img ng-src="{{user.image['3']['#text']}}" alt="{{user.name}}" />
 		<ul class="usercard__info">
 			<li>{{user.name}}</a></li>
 			<li><span>total of tracks scrobbled</span>{{user.playcount}}</a></li>
