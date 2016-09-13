@@ -8,7 +8,7 @@ import { lastfmApiFactory } from './factories/lastfmApiFactory';
 import { scrobbledCtrl } from './controllers/scrobbledCtrl';
 import { topArtistsCtrl } from './controllers/topArtistsCtrl';
 import { usercardCtrl } from './controllers/usercardCtrl';
-import { MenuCtrl } from './controllers/MenuCtrl';
+import { menuCtrl } from './controllers/menuCtrl';
 import { chartsCtrl } from './controllers/chartsCtrl';
 
 // Background generation
@@ -25,7 +25,7 @@ app.factory('lastfmApiFactory', [lastfmApiFactory]);
 app.controller('scrobbledCtrl', ['$scope', '$http', 'lastfmApiFactory', scrobbledCtrl]);
 app.controller('topArtistsCtrl', ['$scope', '$http', 'lastfmApiFactory', topArtistsCtrl]);
 app.controller('usercardCtrl', ['$scope', '$http', 'lastfmApiFactory', usercardCtrl]);
-app.controller('MenuCtrl', ['$scope', 'lastfmApiFactory', MenuCtrl]);
+app.controller('menuCtrl', ['$scope', 'lastfmApiFactory', menuCtrl]);
 app.controller('chartsCtrl', ['$scope', 'lastfmApiFactory', chartsCtrl]);
 
 

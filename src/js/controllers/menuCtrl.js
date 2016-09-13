@@ -1,4 +1,4 @@
-function MenuCtrl($scope, lastfmApiFactory) {
+function menuCtrl($scope, lastfmApiFactory) {
 
   let {
     user
@@ -11,4 +11,4 @@ function MenuCtrl($scope, lastfmApiFactory) {
   };
 }
 
-export { MenuCtrl };
+export { menuCtrl };
