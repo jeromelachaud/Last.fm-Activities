@@ -50,13 +50,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
 app.directive('menu', function(){
   return {
     restrict: 'E',
-    templateUrl:'/dist/templates/menu.html'
+    templateUrl:'./templates/menu.html'
   };
 });
 
 app.directive('loading', function(){
   return {
     restrict: 'E',
-    templateUrl:'/dist/templates/loading.html'
+    templateUrl:'./templates/loading.html'
   };
 });
