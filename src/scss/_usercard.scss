@@ -17,9 +17,14 @@
   padding: 1rem 0.7rem 0.7rem 0;
 }
 
-.usercard__info li {
+.usercard__info li,
+.usercard__info a, {
   color:#fff;
   text-align: right;
+}
+
+.usercard__info a:hover, {
+  background-color: rgba(255,255,255,0.4);
 }
 
 .usercard__info li span{
