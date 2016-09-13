@@ -1,10 +1,10 @@
 {
   "name": "last-fm-activities",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/js/app.js",
   "scripts": {
-    "dev:js": "watchify src/js/index.js -o dist/app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
-    "build:js": "browserify src/js/index.js -o dist/app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
+    "dev:js": "watchify src/js/app.js -o dist/app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
+    "build:js": "browserify src/js/app.js -o dist/app.js -t [ babelify --presets [ es2015 ] ] --debug --verbose",
     "watch:scss": "nodemon -e scss -x \"npm run dev:css\"",
     "dev:css": "node-sass src/scss/main.scss dist/app.css --source-map=true",
     "build:css": "node-sass src/scss/main.scss dist/app.css --output-style=compressed",
