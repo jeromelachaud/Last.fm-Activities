@@ -1,7 +1,7 @@
 // Import external librairies
 import angular from 'angular';
 import angularRouter from 'angular-ui-router';
-import GeoPattern from 'GeoPattern';
+import GeoPattern from 'geopattern';
 
 // Import components
 import { lastfmApiFactory } from './factories/lastfmApiFactory';
