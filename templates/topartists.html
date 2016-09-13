@@ -1,0 +1,15 @@
+<loading></loading>
+
+<div class="grid">
+	<ul class="list">
+		<li class="item" ng-repeat="artist in artists">
+			<a href="{{artist.url}}" target="_blank">
+				<img ng-src="{{artist.image['4']['#text']}}" />
+				<ul class="item__info">
+					<li class="name"><strong>{{artist.name}}</strong></li>
+					<li class="album"><em>{{artist.playcount}} plays</em></li>
+				</ul>
+			</a>
+		</li>
+	</ul>
+</div>
