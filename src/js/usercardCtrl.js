@@ -1,3 +1,5 @@
+import moment from 'moment';
+
 function usercardCtrl($scope, $http, lastfmApiFactory) {
 
   let {
@@ -14,6 +16,8 @@ function usercardCtrl($scope, $http, lastfmApiFactory) {
     $scope.loading = false;
     $scope.user = data['user'];
     $scope.image = data['image'];
+    $scope.date = data['user'].registered['#text'];
+    $scope.formatedDate = moment.unix($scope.date).format('MM/DD/YYYY');
   });
 }
 
