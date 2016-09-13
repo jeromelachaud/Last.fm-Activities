@@ -27,10 +27,10 @@ app.controller('MenuCtrl', ['$scope', 'lastfmApiFactory', MenuCtrl]);
 
 /* Routes */
 app.config(function($stateProvider, $urlRouterProvider) {
-  // $urlRouterProvider.otherwise('./recenttracks');
+  $urlRouterProvider.otherwise('recenttracks');
   $stateProvider
     .state('home', {
-      url: '/',
+      url: '/#',
       templateUrl: './templates/recenttracks.html',
       controller: scrobbledCtrl
     })
