@@ -1,0 +1,34 @@
+/* Usercard */
+.usercard {
+  width: 25rem;
+  margin: 5px auto;
+  background-color: rgba(255,255,255,0.3);
+}
+
+@media screen and (min-width: 860px) {
+  .usercard {
+    width: auto;
+    border: 0;
+  }
+}
+
+.usercard__info {
+  margin: 0 auto;
+  padding: 1rem 0.7rem 0.7rem 0;
+}
+
+.usercard__info li,
+.usercard__info a, {
+  color:#fff;
+  text-align: right;
+}
+
+.usercard__info a:hover, {
+  background-color: rgba(255,255,255,0.4);
+}
+
+.usercard__info li span{
+  font-size: 1.5rem;
+  font-style: italic;
+  margin-right: 5px;
+}

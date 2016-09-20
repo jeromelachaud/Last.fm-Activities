@@ -1,0 +1,36 @@
+/* Loader */
+.loading {
+  text-align: center;
+  height: 50vh;
+  padding-top: 25vh;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  position: relative; }
+
+.loader-bars:before, .loader-bars:after,
+.loader-bars span {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  width: 10px;
+  height: 30px;
+  background-color: #FFF;
+  -webkit-animation: grow 1s linear infinite;
+  -moz-animation: grow 1s linear infinite;
+  animation: grow 1s linear infinite; }
+.loader-bars:after {
+  left: 15px;
+  -webkit-animation-delay: -0.66s;
+  -moz-animation-delay: -0.66s;
+  animation-delay: -0.66s; }
+.loader-bars span {
+  left: 30px;
+  -webkit-animation-delay: -0.33s;
+  -moz-animation-delay: -0.33s;
+  animation-delay: -0.33s; }
