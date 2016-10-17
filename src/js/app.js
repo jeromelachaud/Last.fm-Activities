@@ -1,7 +1,6 @@
 // Import external librairies
 import angular from 'angular';
 import angularRouter from 'angular-ui-router';
-import GeoPattern from 'geopattern';
 
 // Import components
 import { lastfmApiFactory } from './factories/lastfmApiFactory';
@@ -10,14 +9,6 @@ import { topArtistsCtrl } from './controllers/topArtistsCtrl';
 import { usercardCtrl } from './controllers/usercardCtrl';
 import { menuCtrl } from './controllers/menuCtrl';
 import { chartsCtrl } from './controllers/chartsCtrl';
-
-// Background generation
-const pattern = GeoPattern.generate('lastFmActivities', {
-  color: '#B90000',
-  generator: 'plusSigns'
-});
-let backgroundImg = pattern.toDataUrl();
-document.body.style.backgroundImage = backgroundImg;
 
 // App init
 const app = angular.module('lastFmApp', [angularRouter]);
