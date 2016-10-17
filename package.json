@@ -16,7 +16,8 @@
     "start": "live-server --host=localhost --open=dist",
     "clean": "rm -rf dist & mkdirp 'dist'",
     "dev": "npm run clean & npm run dev:index & npm run dev:templates & npm run build:img & npm run watch:scss & npm run dev:js & npm run start",
-    "build": "npm run clean & npm run build:index & npm run build:templates & npm run build:img & npm run build:css & npm run build:js"
+    "build": "npm run clean & npm run build:index & npm run build:templates & npm run build:img & npm run build:css & npm run build:js",
+    "serve": "python -m SimpleHTTPServer"
   },
   "repository": {
     "type": "git",
